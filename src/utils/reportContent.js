@@ -18,13 +18,13 @@ export const formatObservationValue = (row, { key, digits }) => {
 }
 
 export const RLC_EQUATIONS = [
-  { label: 'Resistive voltage', html: 'V<sub>R</sub> = I × R' },
-  { label: 'Inductive voltage', html: 'V<sub>L</sub> = I × X<sub>L</sub>' },
-  { label: 'Capacitive voltage', html: 'V<sub>C</sub> = I × X<sub>C</sub>' },
+  { label: 'Resistive voltage', html: 'I<sub>R</sub> = <span class="equation-fraction"><i>V</i><i>R</i></span>' },
+  { label: 'Inductive voltage', html: 'I<sub>L</sub> = <span class="equation-fraction"><i>V</i><i>X<sub>L</sub></i></span>' },
+  { label: 'Capacitive voltage', html: 'I<sub>C</sub> = <span class="equation-fraction"><i>V</i><i>X<sub>C</sub></i></span>' },
   { label: 'Inductive reactance', html: 'X<sub>L</sub> = 2πfL' },
-  { label: 'Capacitive reactance', html: 'X<sub>C</sub> = <span class="equation-fraction"><i>1</i><i>2πfC</i></span>' },
+  { label: 'Capacitive reactance', html: 'X<sub>C</sub> = <span class="equation-fraction"><i>1</i><i>2πf C</i></span>' },
   { label: 'Impedance', html: 'Z = √(R² + (X<sub>L</sub> − X<sub>C</sub>)²)' },
-  { label: 'Circuit current', html: 'I = V / Z' },
+  { label: 'Circuit current', html: 'I = √(I<sub>R</sub>² + (I<sub>C</sub> − I<sub>L</sub>)²)' },
   { label: 'Power factor', html: 'cosφ = R / Z' },
   { label: 'Active power', html: 'P = VI cosφ' },
   { label: 'Error Analysis', html: '% Error = <span class="equation-fraction"><i>|Measured Value − True Value|</i><i>True Value</i></span> × 100', note: 'True Value = Theoretical Value' },
