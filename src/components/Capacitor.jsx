@@ -49,7 +49,7 @@ const Capacitor = ({ onValueChange, disabled = false, selectedValue: controlledV
               aria-label="Select capacitor value"
             >
               <option value="" disabled>Select µF</option>
-              <option value="2.2">2.2 µF</option>
+              <option value="2.7">2.7 µF</option>
               <option value="4.7">4.7 µF</option>
             </select>
           </div>

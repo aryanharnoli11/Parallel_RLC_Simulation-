@@ -2867,7 +2867,7 @@ Base modal container
   position: absolute;
   
   /* Calibrated pivot for the 0-30 mA artwork. */
-  top: 54%;
+  top: 110px;
   left: 48.5%;
   
   z-index: 2;
@@ -3033,19 +3033,19 @@ Base modal container
 
 /* V2 (Top Right) */
 .voltmeter__needle--V2 {
-  top: 108%;
+  top: 110px;
    left:48.5%;
 }
 
 /* V3 (Middle Right) */
 .voltmeter__needle--V3 {
-  top: 108%;
+  top: 110px;
  left: 48.5%;
 }
 
 /* V4 (Bottom Right) */
 .voltmeter__needle--V4 {
-  top: 108%;
+  top: 110px;
  left: 48.5%;
 }
 /* ==========================================================================

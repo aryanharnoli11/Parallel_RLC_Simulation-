@@ -39,7 +39,7 @@ const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledVa
           aria-label="Select inductor value"
         >
           <option value="" disabled>Select H</option>
-          <option value="2">2 H</option>
+          <option value="3">3 H</option>
           <option value="5">5 H</option>
         </select>
       </article>
