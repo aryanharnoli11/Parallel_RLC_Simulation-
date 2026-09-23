@@ -219,10 +219,10 @@
       "id": 18,
       "target": "#voltmeter-v2 .voltmeter__image",
       "title": {
-        "en": "AC Voltmeter V2"
+        "en": "AC Ammeter A2"
       },
       "description": {
-        "en": "This voltmeter is used to measure the voltage drop across the resistor in the series RLC circuit. \n\n**Rating**: 0–50 V AC"
+        "en": "A2 is an AC ammeter used for current measurement in the RLC circuit. \n\n**Rating**: 0–50 mA AC"
       },
       "audio": "AC Voltmeter 2.wav",
       "placement": "left"
@@ -231,10 +231,10 @@
       "id": 19,
       "target": "#voltmeter-v3 .voltmeter__image",
       "title": {
-        "en": "AC Voltmeter V3"
+        "en": "AC Ammeter A3"
       },
       "description": {
-        "en": "This voltmeter is used to measure the voltage drop across the inductor in the series RLC circuit. \n\n**Rating**: 0–50 V AC"
+        "en": "A3 is an AC ammeter used for current measurement in the RLC circuit. \n\n**Rating**: 0–50 mA AC"
       },
       "audio": "AC Voltmeter 3.wav",
       "placement": "left"
@@ -243,10 +243,10 @@
       "id": 20,
       "target": "#voltmeter-v4 .voltmeter__image",
       "title": {
-        "en": "AC Voltmeter V4"
+        "en": "AC Ammeter A4"
       },
       "description": {
-        "en": "This voltmeter is used to measure the voltage drop across the capacitor in the series RLC circuit. \n\n**Rating**: 0–50 V AC"
+        "en": "A4 is an AC ammeter used for current measurement in the RLC circuit. \n\n**Rating**: 0–50 mA AC"
       },
       "audio": "AC Voltmeter 4.wav",
       "placement": "left"

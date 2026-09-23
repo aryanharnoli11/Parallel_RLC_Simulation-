@@ -47,8 +47,8 @@
     },
     {
       "id": 9,
-      "text": "Connect terminal 9 to terminal 10.",
-      "audio": "Connect terminal 9 to terminal 10.wav"
+      "text": "Connect terminal 6 to terminal 10.",
+      "audio": "#"
     },
     {
       "id": 10,
@@ -57,58 +57,48 @@
     },
     {
       "id": 11,
-      "text": "Connect terminal 7 to terminal 26.",
-      "audio": "Connect terminal 7 to terminal 26.wav"
+      "text": "Connect terminal 8 to terminal 11.",
+      "audio": "#"
     },
     {
       "id": 12,
-      "text": "Connect terminal 8 to terminal 17.",
-      "audio": "Connect terminal 8 to terminal 17.wav"
+      "text": "Connect terminal 11 to terminal 13.",
+      "audio": "#"
     },
     {
       "id": 13,
-      "text": "Connect terminal 11 to terminal 17.",
-      "audio": "Connect terminal 11 to terminal 17.wav"
+      "text": "Connect terminal 13 to terminal 15.",
+      "audio": "#"
     },
     {
       "id": 14,
-      "text": "Connect terminal 12 to terminal 18.",
-      "audio": "Connect terminal 12 to terminal 18.wav"
+      "text": "Connect terminal 12 to terminal 17.",
+      "audio": "#"
     },
     {
       "id": 15,
-      "text": "Connect terminal 13 to terminal 19.",
-      "audio": "Connect terminal 13 to terminal 19.wav"
+      "text": "Connect terminal 18 to terminal 20.",
+      "audio": "#"
     },
     {
       "id": 16,
-      "text": "Connect terminal 14 to terminal 20.",
-      "audio": "Connect terminal 14 to terminal 20.wav"
+      "text": "Connect terminal 14 to terminal 19.",
+      "audio": "#"
     },
     {
       "id": 17,
-      "text": "Connect terminal 15 to terminal 21.",
-      "audio": "Connect terminal 15 to terminal 21.wav"
+      "text": "Connect terminal 16 to terminal 21.",
+      "audio": "#"
     },
     {
       "id": 18,
-      "text": "Connect terminal 16 to terminal 22.",
-      "audio": "Connect terminal 16 to terminal 22..wav"
+      "text": "Connect terminal 20 to terminal 22.",
+      "audio": "#"
     },
     {
       "id": 19,
-      "text": "Connect terminal 18 to terminal 19.",
-      "audio": "Connect terminal 18 to terminal 19. .wav"
-    },
-    {
-      "id": 20,
-      "text": "Connect terminal 20 to terminal 21.",
-      "audio": "Connect terminal 20 to terminal 21..wav"
-    },
-    {
-      "id": 21,
-      "text": "Connect terminal 22 to terminal 26.",
-      "audio": "Connect terminal 22 to terminal 26.wav"
+      "text": "Connect terminal 26 to terminal 7.",
+      "audio": "#"
     },
     {
       "id": 22,

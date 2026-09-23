@@ -1,15 +1,22 @@
 import v1Img from '../assets/V1.png';
-import v2Img from '../assets/V2.png';
-import v3Img from '../assets/V3.png';
-import v4Img from '../assets/V4.png';
+import a2Img from '../assets/A2.png';
+import a3Img from '../assets/A3.png';
+import a4Img from '../assets/A4.png';
 import needleImg from '../assets/needle.png';
 import '../App.css';
 
 const voltmeterImages = {
   V1: v1Img,
-  V2: v2Img,
-  V3: v3Img,
-  V4: v4Img,
+  V2: a2Img,
+  V3: a3Img,
+  V4: a4Img,
+};
+
+const meterAccessibleNames = {
+  V1: 'V1 AC voltmeter',
+  V2: 'A2 AC ammeter',
+  V3: 'A3 AC ammeter',
+  V4: 'A4 AC ammeter',
 };
 
 import { DIAL_GEOMETRY } from '../utils/rlcMeterCalibration.js';
@@ -97,7 +104,7 @@ const Voltmeter = ({ label = "V1", value = 0, angleDeg = null }) => {
       >
         <img
           src={voltmeterImages[label]}
-          alt={`${label} AC voltmeter`}
+          alt={meterAccessibleNames[label] || `${label} analog meter`}
           className="voltmeter__image"
         />
 

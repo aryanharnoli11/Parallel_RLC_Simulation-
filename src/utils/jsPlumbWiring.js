@@ -70,19 +70,17 @@ export const VALID_CONNECTION_SEQUENCE = [
   '4-endpoint', '26-endpoint',
   '5-endpoint', '25-endpoint',
   '6-endpoint', '9-endpoint',
-  '9-endpoint', '10-endpoint',
+  '6-endpoint', '10-endpoint',
   '7-endpoint', '18-endpoint',
-  '7-endpoint', '26-endpoint',
-  '8-endpoint', '17-endpoint',
-  '11-endpoint', '17-endpoint',
-  '12-endpoint', '18-endpoint',
-  '13-endpoint', '19-endpoint',
-  '14-endpoint', '20-endpoint',
-  '15-endpoint', '21-endpoint',
-  '16-endpoint', '22-endpoint',
-  '18-endpoint', '19-endpoint',
-  '20-endpoint', '21-endpoint',
-  '22-endpoint', '26-endpoint'
+  '8-endpoint', '11-endpoint',
+  '11-endpoint', '13-endpoint',
+  '13-endpoint', '15-endpoint',
+  '12-endpoint', '17-endpoint',
+  '18-endpoint', '20-endpoint',
+  '14-endpoint', '19-endpoint',
+  '16-endpoint', '21-endpoint',
+  '20-endpoint', '22-endpoint',
+  '26-endpoint', '7-endpoint'
 ]
 
 export const DEFAULT_AUTO_CONNECTIONS = [
@@ -92,19 +90,17 @@ export const DEFAULT_AUTO_CONNECTIONS = [
   ['4-endpoint', '26-endpoint'],
   ['5-endpoint', '25-endpoint'],
   ['6-endpoint', '9-endpoint'],
-  ['9-endpoint', '10-endpoint'],
+  ['6-endpoint', '10-endpoint'],
   ['7-endpoint', '18-endpoint'],
-  ['7-endpoint', '26-endpoint'],
-  ['8-endpoint', '17-endpoint'],
-  ['11-endpoint', '17-endpoint'],
-  ['12-endpoint', '18-endpoint'],
-  ['13-endpoint', '19-endpoint'],
-  ['14-endpoint', '20-endpoint'],
-  ['15-endpoint', '21-endpoint'],
-  ['16-endpoint', '22-endpoint'],
-  ['18-endpoint', '19-endpoint'],
-  ['20-endpoint', '21-endpoint'],
-  ['22-endpoint', '26-endpoint']
+  ['8-endpoint', '11-endpoint'],
+  ['11-endpoint', '13-endpoint'],
+  ['13-endpoint', '15-endpoint'],
+  ['12-endpoint', '17-endpoint'],
+  ['18-endpoint', '20-endpoint'],
+  ['14-endpoint', '19-endpoint'],
+  ['16-endpoint', '21-endpoint'],
+  ['20-endpoint', '22-endpoint'],
+  ['26-endpoint', '7-endpoint']
 ]
 
 // =================================================================

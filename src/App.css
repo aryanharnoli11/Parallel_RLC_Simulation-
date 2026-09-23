@@ -10,6 +10,9 @@
   --eq-grid-rows: 4;
   --eq-grid-gap-x: 12px;
   --eq-grid-gap-y: 16px;
+  /* V1 is the reference size for every voltmeter and ammeter. */
+  --standard-meter-width: 170px;
+  --standard-meter-height: 200px;
   /* === NEW: FORMULA MODAL VARIABLES === */
   --formula-font: "Latin Modern Math", "Cambria Math", "Times New Roman", serif;
   --formula-bg: #ffffff;
@@ -2840,7 +2843,7 @@ Base modal container
   margin-right: 1px; 
   
   /* 2. RESIZE: Base container configuration */
-  width: 170px; 
+  width: var(--standard-meter-width);
   height: auto;
   padding-bottom: 0;
 }
@@ -2849,7 +2852,8 @@ Base modal container
 .ammeter__dial {
   display: block;
   width: 100%;
-  height: auto;
+  height: var(--standard-meter-height);
+  object-fit: fill;
   
   position: relative;
   transform: scaleX(var(--dial-scale-x)) scaleY(var(--dial-scale-y));
@@ -2924,7 +2928,7 @@ Base modal container
 
 /* V1 (Top Row) */
 .voltmeter--V1 {
-  width: 170px;
+  width: var(--standard-meter-width);
   height: 110px;
   position: relative;
   right: 270px;
@@ -2937,7 +2941,7 @@ Base modal container
 
 /* V2 (Top Right) */
 .voltmeter--V2 {
-  width: 170px;
+  width: var(--standard-meter-width);
   height: 110px;
   position: relative;
   top: -285px;
@@ -2951,7 +2955,7 @@ Base modal container
 
 /* V3 (Middle Right) */
 .voltmeter--V3 {
-  width: 170px;
+  width: var(--standard-meter-width);
   height: 110px;
   position: relative;
   top: -150px;
@@ -2965,7 +2969,7 @@ Base modal container
 
 /* V4 (Bottom Right) */
 .voltmeter--V4 {
-  width: 170px;
+  width: var(--standard-meter-width);
   height: 110px;
   position: relative;
   top: 10px;
@@ -2980,8 +2984,8 @@ Base modal container
 .voltmeter__image {
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: var(--standard-meter-height);
+  object-fit: fill;
 }
 
 /* ==========================================================================

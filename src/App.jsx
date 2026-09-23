@@ -588,54 +588,7 @@ const handlePrint = () => {
     window.print()
   }, 200) // ⚠️ required (browser blocks audio otherwise)
 }
-  // const handleGenerateReport = () => {
-  //   if (readingCount < MIN_REPORT_READINGS) {
-  //     const remainingReadings = MIN_REPORT_READINGS - readingCount
-  //     setStatus(`Add ${remainingReadings} more reading(s) before generating the experiment report.`)
-  //     return
-  //   }
 
-  //   if (!calculationsVerified) {
-  //     setStatus('Correctly verify any two observation readings before generating the report.')
-  //     return
-  //   }
-
-  //   const reportWindow = generateRlcReport({
-  //     observations,
-  //     parameters: { r, l, c },
-  //     theoreticalCalculations: Object.values(calculationRows),
-  //     sessionStart,
-  //   })
-
-  //   if (!reportWindow) {
-  //     setStatus('Unable to open the report window.')
-  //     showAlert({
-  //       title: 'Popup Blocked',
-  //       description: 'Unable to open the report window. Please allow pop-ups and try again.',
-  //       type: 'error',
-  //       icon: '❌',
-  //       placement: 'center',
-  //       duration: 5000,
-  //     })
-  //     return
-  //   }
-
-  //   window.focus()
-  //   setReportGenerated(true)
-  //   setStatus('RLC Experiment report generated successfully from metrics and observations.')
-  //   scheduleAlert(() => {
-  //     showAlert({
-  //       title: 'Report Generated',
-  //       description: 'Your report has been generated successfully. Click OK to view your report.',
-  //       type: 'success',
-  //       icon: '✅',
-  //       placement: 'center',
-  //       requiresConfirmation: true,
-  //       confirmLabel: 'OK',
-  //       sound: 'genRepBtnClick',
-  //     })
-  //   }, 50)
-  // }
 const handleGenerateReport = () => {
   if (readingCount < MIN_REPORT_READINGS) {
     const remainingReadings = MIN_REPORT_READINGS - readingCount
@@ -1088,7 +1041,7 @@ const handleCheckConnections = useCallback((result, options = {}) => {
                         </p>
                         
                         <div className="instructions-connection-box">
-                          {`1-23, 2-24, 3-25, 4-26\n5-25, 6-9, 6-10, 8-17\n11-17, 12-18, 13-19, 14-20\n15-21, 16-22, 18-19, 20-21\n22-26, 26-7`}
+                          {`1-23, 2-24, 3-25, 4-26\n5-25, 6-9, 6-10, 7-18\n8-11, 11-13, 13-15, 12-17\n18-20, 14-19, 16-21, 20-22\n26-7`}
                         </div>
 
                         <p className="instructions-note"><strong>Note:</strong> If a wire is connected incorrectly, click the corresponding label number to remove the connection.</p>
