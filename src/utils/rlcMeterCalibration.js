@@ -1,42 +1,4 @@
-// ============================================================================
-// RLC METER CALIBRATION
-// ============================================================================
-// This is the single source of truth for what the voltmeters (V2/V3/V4),
-// ammeter (A1), and wattmeter (W1) should display — and how far their
-// needles should rotate — for every selectable Resistor / Inductor /
-// Capacitor combination.
-//
-// There are 3 resistor values x 2 inductor values x 2 capacitor values = 12
-// possible combinations. Each one has its own row below, taken from the
-// experiment's reference observation table (readings recorded at the rated
-// 30 V supply).
-//
-// HOW THE READINGS ARE USED
-// ----------------------------------------------------------------------------
-// As the Variac dial is turned from 0 V to 30 V, every reading below scales
-// linearly with the supply voltage:
-//     displayedValue = ratedValue * (currentVoltage / 30)
-//
-// HOW THE NEEDLE ANGLES ARE USED (AND HOW TO MANUALLY RE-CALIBRATE THEM)
-// ----------------------------------------------------------------------------
-// By default, a needle's rotation at the rated (30 V) reading is calculated
-// automatically from the physical dial geometry in DIAL_GEOMETRY below:
-//     angleAt30V = startAngle + (ratedValue / maxValue) * sweepAngle
-// At any other supply voltage, the needle interpolates smoothly between the
-// dial's zero position (startAngle) and that angleAt30V.
-//
-// If, for a specific R/L/C combination, the automatically computed angle
-// doesn't line up visually with a meter's printed scale, you can override it
-// by hand: open the matching row below and set the corresponding field
-// inside `angles` (vR / vL / vC / current / power) to the exact angle in
-// degrees (as used by the CSS custom properties, e.g. --voltmeter-needle-
-// rotation) you want that needle to point to once the supply reaches 30 V.
-// Leave a field as `null` to keep using the automatic calculation.
-// ============================================================================
 
-// Shared analog dial geometry. The same dial artwork is reused for every
-// meter of a given type, so its "zero" pointer angle, "full-scale" sweep,
-// and full-scale physical value live in one place.
 export const DIAL_GEOMETRY = {
   // The needle artwork points straight up at 0deg. These angles follow the
   // first and last printed tick marks on each meter face.
@@ -211,20 +173,20 @@ export const RLC_METER_TABLE = [
 // section. They stay separate from the measured meter values above so that
 // verification and error calculations use the supplied answer key.
 export const RLC_VERIFICATION_TABLE = [
-  { r: '1', l: '3', c: '2.7', nature: 'Inductive', current: 30.60, vR: 29.55, vL: 31, vC: 26.20, cosPhi: null, power: 0.88 },
-  { r: '1', l: '3', c: '4.7', nature: 'Capacitive', current: 32, vR: 29.55, vL: 31, vC: 45.50, cosPhi: null, power: 0.88 },
-  { r: '1', l: '5', c: '2.7', nature: 'Capacitive', current: 30.60, vR: 29.55, vL: 18.75, vC: 26.20, cosPhi: null, power: 0.88 },
-  { r: '1', l: '5', c: '4.7', nature: 'Capacitive', current: 39, vR: 29.55, vL: 18.75, vC: 45.50, cosPhi: null, power: 0.88 },
+  { r: '1', l: '3', c: '2.7', nature: 'Inductive', current: 30.67, vR: 29.55, vL: 31, vC: 26.20, cosPhi: 0.97, power: 0.90 },
+  { r: '1', l: '3', c: '4.7', nature: 'Capacitive', current: 32.49, vR: 29.55, vL: 31, vC: 45.50, cosPhi: 0.92, power: 0.90 },
+  { r: '1', l: '5', c: '2.7', nature: 'Capacitive', current: 30.66, vR: 29.55, vL: 18.75, vC: 26.20, cosPhi: 0.97, power: 0.90 },
+  { r: '1', l: '5', c: '4.7', nature: 'Capacitive', current: 39.18, vR: 29.55, vL: 18.75, vC: 45.50, cosPhi: 0.76, power: 0.90 },
 
-  { r: '2', l: '3', c: '2.7', nature: 'Inductive', current: 16.80, vR: 14.50, vL: 31, vC: 26.20, cosPhi: null, power: 0.45 },
-  { r: '2', l: '3', c: '4.7', nature: 'Capacitive', current: 19.20, vR: 14.50, vL: 31, vC: 45.50, cosPhi: null, power: 0.45 },
-  { r: '2', l: '5', c: '2.7', nature: 'Capacitive', current: 16, vR: 14.50, vL: 18.75, vC: 26.20, cosPhi: null, power: 0.45 },
-  { r: '2', l: '5', c: '4.7', nature: 'Capacitive', current: 29.55, vR: 14.50, vL: 18.75, vC: 45.50, cosPhi: null, power: 0.45 },
+  { r: '2', l: '3', c: '2.7', nature: 'Inductive', current: 16.30, vR: 14.50, vL: 31, vC: 26.20, cosPhi: 0.92, power: 0.45 },
+  { r: '2', l: '3', c: '4.7', nature: 'Capacitive', current: 19.50, vR: 14.50, vL: 31, vC: 45.50, cosPhi: 0.76, power: 0.45 },
+  { r: '2', l: '5', c: '2.7', nature: 'Capacitive', current: 16.29, vR: 14.50, vL: 18.75, vC: 26.20, cosPhi: 0.92, power: 0.45 },
+  { r: '2', l: '5', c: '4.7', nature: 'Capacitive', current: 29.31, vR: 14.50, vL: 18.75, vC: 45.50, cosPhi: 0.51, power: 0.45 },
 
-  { r: '3', l: '3', c: '2.7', nature: 'Inductive', current: 11.30, vR: 9.97, vL: 31, vC: 26.20, cosPhi: null, power: 0.29 },
-  { r: '3', l: '3', c: '4.7', nature: 'Capacitive', current: 15.55, vR: 9.97, vL: 31, vC: 45.50, cosPhi: null, power: 0.29 },
-  { r: '3', l: '5', c: '2.7', nature: 'Capacitive', current: 11.30, vR: 9.97, vL: 18.75, vC: 26.20, cosPhi: null, power: 0.29 },
-  { r: '3', l: '5', c: '4.7', nature: 'Capacitive', current: 26.50, vR: 9.97, vL: 18.75, vC: 45.50, cosPhi: null, power: 0.29 },
+  { r: '3', l: '3', c: '2.7', nature: 'Inductive', current: 11.86, vR: 9.97, vL: 31, vC: 26.20, cosPhi: 0.84, power: 0.30 },
+  { r: '3', l: '3', c: '4.7', nature: 'Capacitive', current: 15.97, vR: 9.97, vL: 31, vC: 45.50, cosPhi: 0.62, power: 0.30 },
+  { r: '3', l: '5', c: '2.7', nature: 'Capacitive', current: 11.85, vR: 9.97, vL: 18.75, vC: 26.20, cosPhi: 0.84, power: 0.30 },
+  { r: '3', l: '5', c: '4.7', nature: 'Capacitive', current: 27.10, vR: 9.97, vL: 18.75, vC: 45.50, cosPhi: 0.36, power: 0.30 },
 ]
 
 // Builds the "R-L-C" lookup key used to find a case, e.g. "1-2-2.2".

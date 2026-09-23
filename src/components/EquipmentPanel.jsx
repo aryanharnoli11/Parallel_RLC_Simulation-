@@ -31,18 +31,18 @@ const wattmeterTerminals = [
 ];
 
 const voltmeter2Terminals = [
-  { id: '11-endpoint', label: '11', polarity: 'plus', left: 690, top: 180, lLeft: 703, lTop: 215 },
-  { id: '12-endpoint', label: '12', polarity: 'minus', left: 760, top: 180, lLeft: 773, lTop: 215 },
-];
+  { id: '11-endpoint', label: '11', polarity: 'plus', left: 690, top: 179, lLeft: 703, lTop: 215 },
+  { id: '12-endpoint', label: '12', polarity: 'minus', left: 762, top: 179, lLeft: 775, lTop: 215 },
+]
 
 const voltmeter3Terminals = [
-  { id: '13-endpoint', label: '13', polarity: 'plus', left: 695, top: 435, lLeft: 710, lTop: 480 },
-  { id: '14-endpoint', label: '14', polarity: 'minus', left: 770, top: 435, lLeft: 785, lTop: 480 },
+  { id: '13-endpoint', label: '13', polarity: 'plus', left: 692, top: 430, lLeft: 705, lTop: 466 },
+  { id: '14-endpoint', label: '14', polarity: 'minus', left: 769, top: 431, lLeft: 783, lTop: 466 },
 ];
 
 const voltmeter4Terminals = [
-  { id: '15-endpoint', label: '15', polarity: 'plus', left: 690, top: 710, lLeft: 703, lTop: 745 },
-  { id: '16-endpoint', label: '16', polarity: 'minus', left: 770, top: 710, lLeft: 783, lTop: 745 },
+  { id: '15-endpoint', label: '15', polarity: 'plus', left: 693, top: 705, lLeft: 707, lTop: 742 },
+  { id: '16-endpoint', label: '16', polarity: 'minus', left: 770, top: 705, lLeft: 783, lTop: 743 },
 ];
 
 const resistorTerminals = [

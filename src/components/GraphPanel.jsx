@@ -16,9 +16,9 @@ const KNOWN_FIELDS = [
 ]
 
 const CALCULATED_FIELDS = [
-  { key: 'vR', label: <>V<sub>R</sub><br />(V)</>, dataLabel: 'V R', errorLabel: <>V<sub>R</sub> error</>, min: 1, max: 50 },
-  { key: 'vL', label: <>V<sub>L</sub><br />(V)</>, dataLabel: 'V L', errorLabel: <>V<sub>L</sub> error</>, min: 1, max: 50 },
-  { key: 'vC', label: <>V<sub>C</sub><br />(V)</>, dataLabel: 'V C', errorLabel: <>V<sub>C</sub> error</>, min: 1, max: 50 },
+  { key: 'vR', label: <>I<sub>R</sub><br />(mA)</>, dataLabel: 'V R', errorLabel: <>V<sub>R</sub> error</>, min: 1, max: 50 },
+  { key: 'vL', label: <>I<sub>L</sub><br />(mA)</>, dataLabel: 'V L', errorLabel: <>V<sub>L</sub> error</>, min: 1, max: 50 },
+  { key: 'vC', label: <>I<sub>C</sub><br />(mA)</>, dataLabel: 'V C', errorLabel: <>V<sub>C</sub> error</>, min: 1, max: 50 },
   { key: 'cosPhi', label: <>cosφ<br /></>, dataLabel: 'Power factor', errorLabel: <>cosφ error</>, min: 0, max: 1 },
   // The reference answers are 0.27–0.89 W, so fractional watts must be allowed.
   { key: 'power', label: <>Power<br />(W)</>, dataLabel: 'Power', errorLabel: <>P error</>, min: 0, max: 50 },
@@ -306,7 +306,7 @@ const handleFieldChange = (rowId, key, value) => {
             <span className="calculation-card__step">01</span>
             <div>
               <h3>Select and Verify Readings</h3>
-              <p>V and I (mA) are prefilled with the correct values. Calculate  V<sub>R</sub>, V<sub>L</sub>, V<sub>C</sub>, cos⁡ϕ, and Power using the provided Equations.</p>
+              <p>V and I (mA) are prefilled with the correct values. Calculate  I<sub>R</sub>, I<sub>L</sub>, I<sub>C</sub>, cos⁡ϕ, and Power using the provided Equations.</p>
             </div>
             <div className="calculation-card__heading-actions">
               <span className="calculation-row-capacity" aria-live="polite">

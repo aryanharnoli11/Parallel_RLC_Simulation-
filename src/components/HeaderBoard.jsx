@@ -1,7 +1,7 @@
 const HeaderBoard = () => (
   <header className="header-board" id="experiment-title-board" style={{ position: 'relative' }}>
     <span className="header-board__ornament" />
-    <h2>TO STUDY AND MEASURE THE VOLTAGE, CURRENT, POWER AND POWER FACTOR IN SERIES RLC CIRCUIT</h2>
+    <h2>TO STUDY AND MEASURE THE VOLTAGE, CURRENT, POWER AND POWER FACTOR IN PARALLEL RLC CIRCUIT</h2>
     <span className="header-board__ornament header-board__ornament--right" />
 
     {/* TEMPORARY HEADER BOARD WALKTHROUGH BOX */}

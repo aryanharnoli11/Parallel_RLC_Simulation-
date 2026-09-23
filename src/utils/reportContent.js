@@ -5,9 +5,9 @@ export const OBSERVATION_COLUMNS = [
   { key: 'c', label: 'C', unit: 'µF', digits: null },
   { key: 'nature', label: 'Nature', unit: '', digits: null },
   { key: 'current', label: 'I', unit: 'mA', digits: 2 },
-  { key: 'vR', label: 'V<sub>R</sub>', unit: 'V', digits: 2 },
-  { key: 'vL', label: 'V<sub>L</sub>', unit: 'V', digits: 2 },
-  { key: 'vC', label: 'V<sub>C</sub>', unit: 'V', digits: 2 },
+  { key: 'vR', label: 'I<sub>R</sub>', unit: 'mA', digits: 2 },
+  { key: 'vL', label: 'I<sub>L</sub>', unit: 'mA', digits: 2 },
+  { key: 'vC', label: 'I<sub>C</sub>', unit: 'mA', digits: 2 },
   { key: 'power', label: 'Power', unit: 'W', digits: 2 },
 ]
 

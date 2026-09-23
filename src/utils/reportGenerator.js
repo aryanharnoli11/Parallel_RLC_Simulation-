@@ -665,7 +665,7 @@ tr:nth-child(even) {
         <p class="report-stamp">Generated on ${escapeHtml(reportDateText)}</p>
       </div>
       <p class="report-experiment-label">Experiment Title</p>
-      <p class="report-experiment-title">To Study and measure the Voltage, Current, Power and Power Factor in a Series RLC Circuit</p>
+      <p class="report-experiment-title">To Study and measure the Voltage, Current, Power and Power Factor in a Parallel RLC Circuit</p>
       <div class="info-grid">
         <div class="info-card"><span class="label">Start Time:</span>${escapeHtml(startTimeText)}</div>
         <div class="info-card"><span class="label">End Time:</span>${escapeHtml(endTimeText)}</div>
@@ -680,15 +680,15 @@ tr:nth-child(even) {
       <ul class="two-column-list">
         <li>MCB: 6A, DP, 240V AC, Input Supply: 230 V AC, 50 Hz </li>
         <li>Autotransformer: 0 - 240 V AC. 4.05 kVA, 15 A</li>
-        <li>AC Voltmeter 1: 0 - 50 V</li>
-        <li>AC Voltmeter 2: 0 - 50 V</li>
-        <li>AC Voltmeter 3: 0 - 50 V</li>
-        <li>AC Voltmeter 4: 0 - 50 V</li>
-        <li>AC Ammeter: 0 -30 mA</li>
+        <li>AC Ammeter 1: 0 - 50 mA</li>
+        <li>AC Ammeter 2: 0 - 50 mA</li>
+        <li>AC Ammeter 3: 0 - 50 mA</li>
+        <li>AC Ammeter 4: 0 - 50 mA</li>
+        <li>AC Voltmeter: 0 -50 V</li>
         <li>AC Wattmeter: 0 - 1 W</li>
         <li>Resistor: 1 kΩ, 2 kΩ, 3 kΩ</li>
-        <li>Inductor: 2 H, 5 H</li>
-        <li>Capacitor: 2.2 µF, 4.7 µF</li>
+        <li>Inductor: 3 H, 5 H</li>
+        <li>Capacitor: 2.7 µF, 4.7 µF</li>
         <li>Connecting Wires</li>
       </ul>     
     </div>
@@ -732,7 +732,7 @@ tr:nth-child(even) {
     </div>
      <div class="section report-conclusion">
       <h3>Conclusion</h3>
-      <p style="text-align: justify;">The voltage, current, power, and power factor of the series RLC circuit were successfully measured and analyzed.</p>
+      <p style="text-align: justify;">The voltage, current, power, and power factor of the parallel RLC circuit were successfully measured and analyzed.</p>
     </div>
       </div>
     </div>
@@ -861,7 +861,7 @@ tr:nth-child(even) {
         );
         return window.html2pdf().set({
           margin: [pageMargin, fit.left, pageMargin, fit.left],
-          filename: 'Series RLC Simulation Report.pdf',
+          filename: 'Parallel RLC Simulation Report.pdf',
           // Keep the full-resolution capture and avoid PNG predictor/alpha decoding.
           image: { type: 'jpeg', quality: 1 },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: false },
