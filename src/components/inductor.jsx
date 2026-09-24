@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import InductorImg from '../assets/inductor.png';
+import Inductor5HImg from '../assets/5H_inductor.png';
 import '../App.css';
 
 const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledValue }) => {
   const [internalValue, setInternalValue] = useState('');
   const selectedValue = controlledValue !== undefined ? controlledValue : internalValue;
+  const imageSource = selectedValue === '5' ? Inductor5HImg : InductorImg;
 
   const handleValueChange = (event) => {
     const value = event.target.value;
@@ -19,16 +21,6 @@ const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledVa
       
       {/* Underlying asset structure without the targeting ID */}
       <article className="inductor-component">
-        <h4 className="inductor-component__label">INDUCTOR</h4>
-
-        <div className="inductor-asset-wrapper">
-          <img 
-            src={InductorImg} 
-            alt="Inductor Asset" 
-            className="inductor-asset-graphic" 
-          />
-        </div>
-
         {/* VALUE DROPDOWN - positioned near the blue marker beside the inductor.
             Fine-tune with --inductor-select-x / --inductor-select-y in App.css */}
         <select
@@ -42,6 +34,17 @@ const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledVa
           <option value="3">3 H</option>
           <option value="5">5 H</option>
         </select>
+
+        <h4 className="inductor-component__label">INDUCTOR</h4>
+
+        <div className="inductor-asset-wrapper">
+          <img 
+            src={imageSource}
+            alt={`${selectedValue === '5' ? '5 H' : '3 H'} inductor`}
+            className="inductor-asset-graphic" 
+            draggable={false}
+          />
+        </div>
       </article>
 
       {/* INVISIBLE WALKTHROUGH TARGET BOX (Maintained coordinates & ID) */}

@@ -51,13 +51,13 @@ const resistorTerminals = [
 ];
 
 const inductorTerminals = [
-  { id: '19-endpoint', label: '19', polarity: 'plus', left: 488, top: 706, lLeft: 501, lTop: 741 },
-  { id: '20-endpoint', label: '20', polarity: 'minus', left: 537, top: 706, lLeft: 550, lTop: 741 },
+  { id: '19-endpoint', label: '19', polarity: 'plus', left: 392, top: 665, lLeft: 405, lTop: 705 },
+  { id: '20-endpoint', label: '20', polarity: 'minus', left: 595, top: 665, lLeft: 607, lTop: 705 },
 ];
 
 const capacitorTerminals = [
-  { id: '21-endpoint', label: '21', polarity: 'plus', left: 306, top: 734, lLeft: 319, lTop: 769 },
-  { id: '22-endpoint', label: '22', polarity: 'minus', left: 344, top: 734, lLeft: 360, lTop: 769 },
+  { id: '21-endpoint', label: '21', polarity: 'plus', left: 262, top: 742, lLeft: 275, lTop: 779 },
+  { id: '22-endpoint', label: '22', polarity: 'minus', left: 299, top: 742, lLeft: 313, lTop: 779 },
 ];
 
 const variacTerminals = [
