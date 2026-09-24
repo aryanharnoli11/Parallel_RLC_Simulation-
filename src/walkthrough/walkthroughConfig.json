@@ -193,7 +193,7 @@
       "id": 16,
       "target": ".ammeter .ammeter__dial",
       "title": {
-        "en": "AC Ammeter 1"
+        "en": "AC Ammeter A1"
       },
       "description": {
         "en": "The ammeter 1 is used to measure the total current drawn by the parallel RLC circuit. It displays the current flowing from the supply due to the combined effect of the resistive, inductive, and capacitive branch currents.\n\n**Rating**: 0–50 mA"
@@ -231,7 +231,7 @@
       "id": 19,
       "target": "#voltmeter-v3 .voltmeter__image",
       "title": {
-        "en": "AC Ammeter 3"
+        "en": "AC Ammeter A3"
       }, 
       "description": {
         "en": "The ammeter 3 is used to measure the current flowing through the inductor branch of the parallel RLC circuit.\n\n**Rating**: 0–50 mA"
@@ -243,7 +243,7 @@
       "id": 20,
       "target": "#voltmeter-v4 .voltmeter__image",
       "title": {
-        "en": "AC Ammeter 4"
+        "en": "AC Ammeter A4"
       },
       "description": {
         "en": "The ammeter 4 is used to measure the current flowing through the capacitor branch of the parallel RLC circuit.\n\n**Rating**: 0–50 mA"
