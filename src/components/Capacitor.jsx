@@ -35,6 +35,7 @@ const Capacitor = ({ onValueChange, disabled = false, selectedValue: controlledV
             alt="Capacitor Asset" 
             className="capacitor-asset-graphic" 
             data-spotlight-bounds="0.291,0.100,0.346,0.744"
+            draggable={false}
           />
 
           {/* VALUE DROPDOWN - anchored to the bottom-center of the capacitor image.

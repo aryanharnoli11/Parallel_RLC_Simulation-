@@ -160,7 +160,7 @@
         "en": "Inductor"
       },
       "description": {
-        "en": "The inductor provides the inductive branch in the parallel RLC circuit and stores energy in its magnetic field. It introduces inductive reactance, affects the circuit current and phase relationship, and contributes to the overall power factor of the circuit.\n\n**Rating:** 2 H and 5 H"
+        "en": "The inductor provides the inductive branch in the parallel RLC circuit and stores energy in its magnetic field. It introduces inductive reactance, affects the circuit current and phase relationship, and contributes to the overall power factor of the circuit.\n\n**Rating:** 3 H and 5 H"
       },
       "audio": "Inductor.wav",
       "placement": "top"
@@ -172,7 +172,7 @@
         "en": "Capacitor"
       },
       "description": {
-        "en": "The capacitor acts as the capacitive element of the parallel RLC circuit and stores energy in its electric field. It is used to study the effect of capacitance on circuit current, phase angle, and power factor.\n\n**Rating**: 2.2 µF and 4.7 µF"
+        "en": "The capacitor acts as the capacitive element of the parallel RLC circuit and stores energy in its electric field. It is used to study the effect of capacitance on circuit current, phase angle, and power factor.\n\n**Rating**: 2.7 µF and 4.7 µF"
       },
       "audio": "Capacitor.wav",
       "placement": "top"

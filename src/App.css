@@ -461,6 +461,12 @@
   line-height: 1.15;
 }
 
+.equation-equals {
+  display: inline-block;
+  margin-inline: 0.32em;
+  font-style: normal;
+}
+
 .equation-expression {
   display: inline-flex;
   align-items: center;
@@ -3776,7 +3782,10 @@ Base modal container
   height: 100%;
   display: block;
   object-fit: contain; /* Ensures the graphic scales proportionally without distortion */
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2)); 
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 /* ============================================
    STEP-BY-STEP INSTRUCTION HIGHLIGHTING
