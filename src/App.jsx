@@ -287,9 +287,11 @@ const App = () => {
     vL: ratedReadings.vL * factor,
     vC: ratedReadings.vC * factor,
     angles: {
-      vR: getNeedleAngle('voltmeter', ratedReadings.vR, factor, angleOverrides.vR),
-      vL: getNeedleAngle('voltmeter', ratedReadings.vL, factor, angleOverrides.vL),
-      vC: getNeedleAngle('voltmeter', ratedReadings.vC, factor, angleOverrides.vC),
+      // V2, V3, and V4 use the A2, A3, and A4 ammeter faces. The legacy
+      // vR/vL/vC field names hold the branch-current readings I_R/I_L/I_C.
+      vR: getNeedleAngle('ammeter', ratedReadings.vR, factor, angleOverrides.vR),
+      vL: getNeedleAngle('ammeter', ratedReadings.vL, factor, angleOverrides.vL),
+      vC: getNeedleAngle('ammeter', ratedReadings.vC, factor, angleOverrides.vC),
       current: getNeedleAngle('ammeter', ratedReadings.current, factor, angleOverrides.current),
       power: getNeedleAngle('wattmeter', ratedReadings.power, factor, angleOverrides.power),
     },

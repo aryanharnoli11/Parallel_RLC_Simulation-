@@ -70,10 +70,10 @@ const ReportControls = ({
         </button>
 
         {showEquations && (
-          <aside className="equation-panel" id="equation-panel" role="dialog" aria-label="Series RLC equations">
+          <aside className="equation-panel" id="equation-panel" role="dialog" aria-label="Parallel RLC equations">
             <div className="equation-panel__header">
               <div>
-                <span>Series RLC</span>
+                <span>Parallel RLC</span>
                 <h3>Equations</h3>
               </div>
               <button type="button" onClick={() => setShowEquations(false)} aria-label="Close equations">&times;</button>
@@ -82,7 +82,7 @@ const ReportControls = ({
               {RLC_EQUATIONS.map(({ label, html, note }) => (
                 <div key={label}>
                   <span>{label}</span>
-                  <strong dangerouslySetInnerHTML={{ __html: html }} />
+                  <strong className="equation-panel__formula" dangerouslySetInnerHTML={{ __html: html }} />
                   {note && <small>{note}</small>}
                 </div>
               ))}

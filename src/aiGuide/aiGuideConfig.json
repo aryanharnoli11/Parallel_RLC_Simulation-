@@ -48,7 +48,7 @@
     {
       "id": 9,
       "text": "Connect terminal 6 to terminal 10.",
-      "audio": "#"
+      "audio": "Connect terminal 6 to terminal 10.wav"
     },
     {
       "id": 10,
@@ -58,47 +58,47 @@
     {
       "id": 11,
       "text": "Connect terminal 8 to terminal 11.",
-      "audio": "#"
+      "audio": "Connect terminal 8 to terminal 11.wav"
     },
     {
       "id": 12,
       "text": "Connect terminal 11 to terminal 13.",
-      "audio": "#"
+      "audio": "Connect terminal 11 to terminal 13.wav"
     },
     {
       "id": 13,
       "text": "Connect terminal 13 to terminal 15.",
-      "audio": "#"
+      "audio": "Connect terminal 13 to terminal 15.wav"
     },
     {
       "id": 14,
       "text": "Connect terminal 12 to terminal 17.",
-      "audio": "#"
+      "audio": "Connect terminal 12 to terminal 17.wav"
     },
     {
       "id": 15,
       "text": "Connect terminal 18 to terminal 20.",
-      "audio": "#"
+      "audio": "Connect terminal 18 to terminal 20.wav"
     },
     {
       "id": 16,
       "text": "Connect terminal 14 to terminal 19.",
-      "audio": "#"
+      "audio": "Connect terminal 14 to terminal 19.wav"
     },
     {
       "id": 17,
       "text": "Connect terminal 16 to terminal 21.",
-      "audio": "#"
+      "audio": "Connect terminal 16 to terminal 21.wav"
     },
     {
       "id": 18,
       "text": "Connect terminal 20 to terminal 22.",
-      "audio": "#"
+      "audio": "Connect terminal 20 to terminal 22.wav"
     },
     {
       "id": 19,
       "text": "Connect terminal 26 to terminal 7.",
-      "audio": "#"
+      "audio": "Connect terminal 26 to terminal 7.wav"
     },
     {
       "id": 22,

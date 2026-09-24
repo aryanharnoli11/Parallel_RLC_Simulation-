@@ -450,6 +450,17 @@
   white-space: nowrap;
 }
 
+/* Keep operators vertically centred beside tall fractions. Without an
+   inline flex formatting context, the fraction's text baseline pulls the
+   equals sign toward the denominator. */
+.equation-panel__formula {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1.15;
+}
+
 .equation-expression {
   display: inline-flex;
   align-items: center;
@@ -464,9 +475,11 @@
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;
+  align-self: center;
   font-size: 14px !important;
   line-height: 1.05;
   text-align: center;
+  vertical-align: middle;
 }
 
 .equation-fraction i {
@@ -2866,7 +2879,7 @@ Base modal container
 .ammeter__needle {
   position: absolute;
   
-  /* Calibrated pivot for the 0-30 mA artwork. */
+  /* Calibrated pivot for the 0-50 mA artwork. */
   top: 110px;
   left: 48.5%;
   
@@ -4035,6 +4048,8 @@ Base modal container
 .instructions-body p {
   margin-bottom: 10px;
   border-radius: 4px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .instructions-connection-box {

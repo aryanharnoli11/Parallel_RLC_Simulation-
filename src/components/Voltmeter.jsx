@@ -21,15 +21,14 @@ const meterAccessibleNames = {
 
 import { DIAL_GEOMETRY } from '../utils/rlcMeterCalibration.js';
 
-// Shared with the RLC meter calibration table -- see
-// src/utils/rlcMeterCalibration.js for how to hand-tune needle angles.
-const METER_MAX_VOLTAGE = DIAL_GEOMETRY.voltmeter.maxValue;
-
-const voltmeterAngles = {
-  V1: { start: DIAL_GEOMETRY.voltmeter.startAngle, sweep: DIAL_GEOMETRY.voltmeter.sweepAngle },
-  V2: { start: DIAL_GEOMETRY.voltmeter.startAngle, sweep: DIAL_GEOMETRY.voltmeter.sweepAngle },
-  V3: { start: DIAL_GEOMETRY.voltmeter.startAngle, sweep: DIAL_GEOMETRY.voltmeter.sweepAngle },
-  V4: { start: DIAL_GEOMETRY.voltmeter.startAngle, sweep: DIAL_GEOMETRY.voltmeter.sweepAngle },
+// V1 is the supply voltmeter. The three right-hand instruments retain their
+// legacy V2/V3/V4 component labels, but their artwork and readings are the
+// A2/A3/A4 branch ammeters (I_R, I_L, and I_C).
+const meterGeometryByLabel = {
+  V1: DIAL_GEOMETRY.voltmeter,
+  V2: DIAL_GEOMETRY.ammeter,
+  V3: DIAL_GEOMETRY.ammeter,
+  V4: DIAL_GEOMETRY.ammeter,
 };
 
 /* STATIC ARTICLE ID LOOKUP */
@@ -79,14 +78,15 @@ const walkthroughLayouts = {
 };
 
 const Voltmeter = ({ label = "V1", value = 0, angleDeg = null }) => {
-  const voltage = Math.max(0, Math.min(Number(value), METER_MAX_VOLTAGE));
-  const ratio = voltage / METER_MAX_VOLTAGE;
+  const geometry = meterGeometryByLabel[label] || DIAL_GEOMETRY.voltmeter;
+  const meterValue = Number.isFinite(Number(value)) ? Number(value) : 0;
+  const ratio = Math.min(Math.max(meterValue / geometry.maxValue, 0), 1);
   // If an explicit angle was computed upstream (see rlcMeterCalibration.js),
   // use it directly so the RLC-case needle calibration can override the
   // generic value-based calculation below.
   const angle = Number.isFinite(angleDeg)
     ? angleDeg
-    : voltmeterAngles[label].start + ratio * voltmeterAngles[label].sweep;
+    : geometry.startAngle + ratio * geometry.sweepAngle;
 
   // Static ID assignments extracted from the dictionaries
   const articleId = articleIds[label] || "voltmeter-default";

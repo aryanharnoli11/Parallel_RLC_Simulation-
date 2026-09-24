@@ -148,7 +148,7 @@
         "en": "Resistor"
       },
       "description": {
-        "en": "The resistor acts as the resistive element of the series RLC circuit and consumes active power. It limits the circuit current and is used to study the effect of resistance on current, voltage drop, power dissipation, and power factor. \n\n **Rating:** 1 kΩ, 2 kΩ, 3 kΩ"
+        "en": "The resistor acts as the resistive element of the parallel RLC circuit and consumes active power. It is used to study the effect of resistance on circuit current, power, and power factor.\n\n **Rating:** 1 kΩ, 2 kΩ, 3 kΩ"
       },
       "audio": "Resistor.wav",
       "placement": "top"
@@ -160,7 +160,7 @@
         "en": "Inductor"
       },
       "description": {
-        "en": "The inductor provides the inductive element of the series RLC circuit and stores energy in its magnetic field. It introduces inductive reactance, opposes changes in current, affects the phase relationship between voltage and current, and influences the circuit impedance and power factor. \n\n**Rating:** 2 H and 5 H"
+        "en": "The inductor provides the inductive branch in the parallel RLC circuit and stores energy in its magnetic field. It introduces inductive reactance, affects the circuit current and phase relationship, and contributes to the overall power factor of the circuit.\n\n**Rating:** 2 H and 5 H"
       },
       "audio": "Inductor.wav",
       "placement": "top"
@@ -172,7 +172,7 @@
         "en": "Capacitor"
       },
       "description": {
-        "en": "The capacitor acts as the capacitive element of the series RLC circuit and stores energy in its electric field. It introduces capacitive reactance, affects the phase angle between voltage and current, and is used to study the effects of capacitance on impedance, circuit current, and power factor.\n\n**Rating**: 2.2 µF and 4.7 µF"
+        "en": "The capacitor acts as the capacitive element of the parallel RLC circuit and stores energy in its electric field. It is used to study the effect of capacitance on circuit current, phase angle, and power factor.\n\n**Rating**: 2.2 µF and 4.7 µF"
       },
       "audio": "Capacitor.wav",
       "placement": "top"
@@ -198,7 +198,7 @@
       "description": {
         "en": "The ammeter 1 is used to measure the total current drawn by the parallel RLC circuit. It displays the current flowing from the supply due to the combined effect of the resistive, inductive, and capacitive branch currents.\n\n**Rating**: 0–50 mA"
       },
-      "audio": "AC Ammeter.wav",
+      "audio": "AC Ammeter 1.wav",
       
       "placement": "bottom"
     },
@@ -209,10 +209,10 @@
         "en": "AC Wattmeter"
       },
       "description": {
-        "en": "The wattmeter is used to measure the active power consumed by the series RLC circuit. The measured power (P) helps in analyzing the power dissipated by the resistor and studying its effect on the overall circuit behaviour and power factor.\n\n**Rating**: 0–1 W AC"
+        "en": "The wattmeter is used to measure the active power consumed by the parallel RLC circuit. The measured power (P) helps in analyzing the power consumed by the resistor and studying its effect on the overall circuit behaviour.\n\n**Rating**: 0–1 W"
       },
       "audio": "AC Wattmeter.wav",
-      "narration": "The wattmeter is used to measure the active power consumed by the series RLC circuit. The measured power (P) helps in analyzing the power dissipated by the resistor and studying its effect on the overall circuit behaviour and power factor.",
+      "narration": "The wattmeter is used to measure the active power consumed by the parallel RLC circuit. The measured power (P) helps in analyzing the power consumed by the resistor and studying its effect on the overall circuit behaviour and power factor.",
       "placement": "bottom"
     },
     {
@@ -224,7 +224,7 @@
       "description": {
         "en": "The ammeter 2 is used to measure the current flowing through the resistor branch of the parallel RLC circuit.  \n\n**Rating**: 0–50 mA"
       },
-      "audio": "AC Voltmeter 2.wav",
+      "audio": "AC Ammeter 2.wav",
       "placement": "left"
     },
     {
@@ -236,7 +236,7 @@
       "description": {
         "en": "The ammeter 3 is used to measure the current flowing through the inductor branch of the parallel RLC circuit.\n\n**Rating**: 0–50 mA"
       },
-      "audio": "AC Voltmeter 3.wav",
+      "audio": "AC Ammeter 3.wav",
       "placement": "left"
     },
     {
@@ -248,7 +248,7 @@
       "description": {
         "en": "The ammeter 4 is used to measure the current flowing through the capacitor branch of the parallel RLC circuit.\n\n**Rating**: 0–50 mA"
       },
-      "audio": "AC Voltmeter 4.wav",
+      "audio": "AC Ammeter 4.wav",
       "placement": "left"
     },
     {
@@ -258,10 +258,10 @@
         "en": "Observation Table"
       },
       "description": {
-        "en": "This table records the selected RLC values along with the measured readings of voltage, supply current, resistive current (IR), inductive current (IL), capacitive current (IC) and power during the experiment. These observations will be used to calculate the percentage error and analyse the behaviour of the parallel RLC circuit. "
+        "en": "This table records the selected RLC values along with the measured readings of voltage, supply current, resistive current (I_R), inductive current (I_L), capacitive current (I_C) and power during the experiment. These observations will be used to calculate the percentage error and analyse the behaviour of the parallel RLC circuit."
       },
       "audio": "Observation Table.wav",
-      "narration": "This table records the selected RLC values along with the measured readings of voltage, supply current, resistive voltage V R, inductive voltage V L, capacitive voltage V C, and power during the experiment. These observations are used for the Error Analysis and to analyse the behaviour of the series RLC circuit.",
+      "narration": "This table records the selected RLC values along with the measured readings of voltage, supply current, resistive current I R, inductive current I L, capacitive current I C, and power during the experiment. These observations are used for the error analysis and to analyse the behaviour of the parallel RLC circuit.",
       "placement": "right"
     },
     {
@@ -271,7 +271,7 @@
         "en": "Equations"
       },
       "description": {
-        "en": "This panel contains the equations required to verify the readings of the series RLC circuit. Use these expressions to calculate the required values and verify the results by clicking the Verify button."
+        "en": " This panel contains the equations required to verify the readings of the Parallel RLC circuit. Use these expressions to calculate the required values and verify the results by clicking the Verify button."
       },
       "audio": "Equations.wav",
       "placement": "right"
@@ -296,7 +296,7 @@
         "en": "Generate Report"
       },
       "description": {
-        "en": "The Report button generates a summarised report of the simulation. After completing the observation table and theoretical calculations, generate the report. The report will include the time taken to complete the simulation, simulation summary, the apparatus used, recorded readings, user-calculated results and conclusion. \n\n **Note:** Please ensure that at least two readings are verified before generating the report."
+        "en": "The Report button generates a summarised report of the simulation. After completing the observation table and theoretical calculations, generate the report. The report will include the time taken to complete the simulation, simulation summary, the apparatus used, recorded readings, user-calculated results and conclusion.\n\n **Note:** Please ensure that at least two readings are verified before generating the report."
       },
       "audio": "Generate Report.wav",
       "placement": "top"

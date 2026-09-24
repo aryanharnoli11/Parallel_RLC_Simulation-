@@ -20,11 +20,11 @@ const canUseSpeechSynthesis = () => (
 )
 
 const renderNotation = (text, keyPrefix) => (
-  text.split(/(V_R|V_L|V_C)/g).map((part, index) => {
-    const match = /^V_([RLC])$/.exec(part)
+  text.split(/([IV]_[RLC])/g).map((part, index) => {
+    const match = /^([IV])_([RLC])$/.exec(part)
 
     return match
-      ? <Fragment key={`${keyPrefix}-${index}`}>V<sub>{match[1]}</sub></Fragment>
+      ? <Fragment key={`${keyPrefix}-${index}`}>{match[1]}<sub>{match[2]}</sub></Fragment>
       : <Fragment key={`${keyPrefix}-${index}`}>{part}</Fragment>
   })
 )

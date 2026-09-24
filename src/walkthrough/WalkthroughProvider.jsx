@@ -45,8 +45,6 @@ const getElementRect = (element) => {
   }
 }
 
-// Terminals are siblings of the artwork, and jsPlumb endpoints live on the
-// wiring layer. Include all of them in the highlighted equipment bounds.
 const getTargetRect = (target) => {
   const equipment = target?.closest('.eq-item, .v-meters-right-stack > div')
   if (!equipment) return getElementRect(target)
