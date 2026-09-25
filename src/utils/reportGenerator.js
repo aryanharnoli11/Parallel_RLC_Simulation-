@@ -50,14 +50,13 @@ const THEORETICAL_COLUMNS = [
   ['R', '(kΩ)', 'r'],
   ['L', '(H)', 'l'],
   ['C', '(µF)', 'c'],
-  ['V<sub>R</sub>', '(V)', 'vR'],
+  ['I<sub>R</sub>', '(mA)', 'vR'],
   ['Error', '(%)', 'vRError'],
-  ['V<sub>L</sub>', '(V)', 'vL'],
+  ['I<sub>L</sub>', '(mA)', 'vL'],
   ['Error', '(%)', 'vLError'],
-  ['V<sub>C</sub>', '(V)', 'vC'],
+  ['I<sub>C</sub>', '(mA)', 'vC'],
   ['Error', '(%)', 'vCError'],
   ['cosφ', ' ', 'cosPhi'],
-  ['Error', '(%)', 'cosPhiError'],
   ['Power', '(W)', 'power'],
   ['Error', '(%)', 'powerError'],
 ]
@@ -210,6 +209,9 @@ li {
 }
 .section:last-child {
   margin-bottom: 0;
+}
+.report-summary > p {
+  text-align: justify;
 }
 .section > h2:first-child {
   margin-bottom: 12px;
@@ -642,7 +644,7 @@ tr:nth-child(even) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Series RLC Circuit Simulation Report</title>
+  <title>Parallel RLC Circuit Simulation Report</title>
   <base href="${escapeHtml(baseHref)}">
   <style>${css}</style>
 </head>
@@ -675,7 +677,7 @@ tr:nth-child(even) {
 
     <div class="section report-summary">
       <h3>Simulation Summary</h3>
-      <p>The guided walkthrough familiarised the user with the simulation's interface. The circuit was connected, and the connections were verified successfully. The MCB was switched ON, and the desired voltage was set using the autotransformer. The readings were measured using the voltmeters, ammeter, and wattmeter for different RLC combinations, and these measured values were used to calculate the error analysis. Finally, the calculated values were verified, and the performance of the series RLC circuit was analysed successfully. </p>
+      <p>The guided walkthrough familiarised the user with the simulation's interface. The circuit was connected, and the connections were verified successfully. The MCB was switched ON, and the desired voltage was set using the autotransformer. The readings were measured using the voltmeter, ammeters, and wattmeter, and these measured values were used to calculate the required circuit parameters. Finally, the calculated values were verified, and the performance of the parallel RLC circuit was analysed successfully.</p>
       <h3>Apparatus Used:</h3>
       <ul class="two-column-list">
         <li>MCB: 6A, DP, 240V AC, Input Supply: 230 V AC, 50 Hz </li>

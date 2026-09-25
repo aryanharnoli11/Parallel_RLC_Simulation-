@@ -9,184 +9,40 @@ export const DIAL_GEOMETRY = {
   wattmeter: { maxValue: 1, startAngle: -90, sweepAngle: 180 }, // Watts
 }
 
-// 🎯 THE 12 R/L/C CASES — edit any number below to change what the meters
-// display and how far the needles rotate at 30 V.
+//values displayed on the meters and saved in the Observation Table.
 export const RLC_METER_TABLE = [
-  {
-    r: '1',
-    l: '3',
-    c: '2.7',
-    nature: 'Inductive',
-    current: 30.60,
-    vR: 29.55,
-    vL: 31,
-    vC: 26.20,
-    power: 0.88,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
+  { r: '1', l: '3', c: '2.7', nature: 'Inductive', current: 30.60, vR: 29.55, vL: 31, vC: 26.20, cosPhi: 0.97, power: 0.88, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '1', l: '3', c: '4.7', nature: 'Capacitive', current: 32, vR: 29.55, vL: 31, vC: 45.50, cosPhi: 0.92, power: 0.88, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '1', l: '5', c: '2.7', nature: 'Capacitive', current: 30.60, vR: 29.55, vL: 18.75, vC: 26.20, cosPhi: 0.97, power: 0.88, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '1', l: '5', c: '4.7', nature: 'Capacitive', current: 39, vR: 29.55, vL: 18.75, vC: 45.50, cosPhi: 0.76, power: 0.88, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
 
-  {
-    r: '1',
-    l: '3',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 32,
-    vR: 29.55,
-    vL: 31,
-    vC: 45.50,
-    power: 0.88,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
+  { r: '2', l: '3', c: '2.7', nature: 'Inductive', current: 16.80, vR: 14.50, vL: 31, vC: 26.20, cosPhi: 0.92, power: 0.45, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '2', l: '3', c: '4.7', nature: 'Capacitive', current: 19.20, vR: 14.50, vL: 31, vC: 45.50, cosPhi: 0.76, power: 0.45, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '2', l: '5', c: '2.7', nature: 'Capacitive', current: 16, vR: 14.50, vL: 18.75, vC: 26.20, cosPhi: 0.92, power: 0.45, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '2', l: '5', c: '4.7', nature: 'Capacitive', current: 29.55, vR: 14.50, vL: 18.75, vC: 45.50, cosPhi: 0.51, power: 0.45, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
 
-  {
-    r: '1',
-    l: '5',
-    c: '2.7',
-    nature: 'Capacitive',
-    current: 30.60,
-    vR: 29.55,
-    vL: 18.75,
-    vC: 26.20,
-    power: 0.88,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '1',
-    l: '5',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 39,
-    vR: 29.55,
-    vL: 18.75,
-    vC: 45.50,
-    power: 0.88,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '2',
-    l: '3',
-    c: '2.7',
-    nature: 'Inductive',
-    current: 16.80,
-    vR: 14.50,
-    vL: 31,
-    vC: 26.20,
-    power: 0.45,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '2',
-    l: '3',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 19.20,
-    vR: 14.50,
-    vL: 31,
-    vC: 45.50,
-    power: 0.45,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '2',
-    l: '5',
-    c: '2.7',
-    nature: 'Capacitive',
-    current: 16,
-    vR: 14.50,
-    vL: 18.75,
-    vC: 26.20,
-    power: 0.45,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '2',
-    l: '5',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 29.55,
-    vR: 14.50,
-    vL: 18.75,
-    vC: 45.50,
-    power: 0.45,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '3',
-    l: '3',
-    c: '2.7',
-    nature: 'Inductive',
-    current: 11.30,
-    vR: 9.97,
-    vL: 31,
-    vC: 26.20,
-    power: 0.29,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '3',
-    l: '3',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 15.55,
-    vR: 9.97,
-    vL: 31,
-    vC: 45.50,
-    power: 0.29,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '3',
-    l: '5',
-    c: '2.7',
-    nature: 'Capacitive',
-    current: 11.30,
-    vR: 9.97,
-    vL: 18.75,
-    vC: 26.20,
-    power: 0.29,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
-
-  {
-    r: '3',
-    l: '5',
-    c: '4.7',
-    nature: 'Capacitive',
-    current: 26.50,
-    vR: 9.97,
-    vL: 18.75,
-    vC: 45.50,
-    power: 0.29,
-    angles: { vR: null, vL: null, vC: null, current: null, power: null },
-  },
+  { r: '3', l: '3', c: '2.7', nature: 'Inductive', current: 11.30, vR: 9.97, vL: 31, vC: 26.20, cosPhi: 0.84, power: 0.29, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '3', l: '3', c: '4.7', nature: 'Capacitive', current: 15.55, vR: 9.97, vL: 31, vC: 45.50, cosPhi: 0.62, power: 0.29, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '3', l: '5', c: '2.7', nature: 'Capacitive', current: 11.30, vR: 9.97, vL: 18.75, vC: 26.20, cosPhi: 0.84, power: 0.29, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
+  { r: '3', l: '5', c: '4.7', nature: 'Capacitive', current: 26.50, vR: 9.97, vL: 18.75, vC: 45.50, cosPhi: 0.36, power: 0.29, angles: { vR: null, vL: null, vC: null, current: null, power: null } },
 ];
 
-// Exact corrected/theoretical values accepted by the Reading Verification
-// section. They stay separate from the measured meter values above so that
-// verification and error calculations use the supplied answer key.
+//values displayed by the Correct Values button.
 export const RLC_VERIFICATION_TABLE = [
-  { r: '1', l: '3', c: '2.7', nature: 'Inductive', current: 30.67, vR: 29.55, vL: 31, vC: 26.20, cosPhi: 0.97, power: 0.90 },
-  { r: '1', l: '3', c: '4.7', nature: 'Capacitive', current: 32.49, vR: 29.55, vL: 31, vC: 45.50, cosPhi: 0.92, power: 0.90 },
-  { r: '1', l: '5', c: '2.7', nature: 'Capacitive', current: 30.66, vR: 29.55, vL: 18.75, vC: 26.20, cosPhi: 0.97, power: 0.90 },
-  { r: '1', l: '5', c: '4.7', nature: 'Capacitive', current: 39.18, vR: 29.55, vL: 18.75, vC: 45.50, cosPhi: 0.76, power: 0.90 },
+  { r: '1', l: '3', c: '2.7', nature: 'Inductive', current: 30.67, vR: 30, vL: 31.83, vC: 25.45, cosPhi: 0.97, power: 0.90 },
+  { r: '1', l: '3', c: '4.7', nature: 'Capacitive', current: 32.49, vR: 30, vL: 31.83, vC: 44.29, cosPhi: 0.92, power: 0.90 },
+  { r: '1', l: '5', c: '2.7', nature: 'Capacitive', current: 30.66, vR: 30, vL: 19.10, vC: 25.45, cosPhi: 0.97, power: 0.90 },
+  { r: '1', l: '5', c: '4.7', nature: 'Capacitive', current: 39.18, vR: 30, vL: 19.10, vC: 44.29, cosPhi: 0.76, power: 0.90 },
 
-  { r: '2', l: '3', c: '2.7', nature: 'Inductive', current: 16.30, vR: 14.50, vL: 31, vC: 26.20, cosPhi: 0.92, power: 0.45 },
-  { r: '2', l: '3', c: '4.7', nature: 'Capacitive', current: 19.50, vR: 14.50, vL: 31, vC: 45.50, cosPhi: 0.76, power: 0.45 },
-  { r: '2', l: '5', c: '2.7', nature: 'Capacitive', current: 16.29, vR: 14.50, vL: 18.75, vC: 26.20, cosPhi: 0.92, power: 0.45 },
-  { r: '2', l: '5', c: '4.7', nature: 'Capacitive', current: 29.31, vR: 14.50, vL: 18.75, vC: 45.50, cosPhi: 0.51, power: 0.45 },
+  { r: '2', l: '3', c: '2.7', nature: 'Inductive', current: 16.30, vR: 15, vL: 31.83, vC: 25.45, cosPhi: 0.92, power: 0.45 },
+  { r: '2', l: '3', c: '4.7', nature: 'Capacitive', current: 19.50, vR: 15, vL: 31.83, vC: 44.29, cosPhi: 0.76, power: 0.45 },
+  { r: '2', l: '5', c: '2.7', nature: 'Capacitive', current: 16.29, vR: 15, vL: 19.10, vC: 25.45, cosPhi: 0.92, power: 0.45 },
+  { r: '2', l: '5', c: '4.7', nature: 'Capacitive', current: 29.31, vR: 15, vL: 19.10, vC: 44.29, cosPhi: 0.51, power: 0.45 },
 
-  { r: '3', l: '3', c: '2.7', nature: 'Inductive', current: 11.86, vR: 9.97, vL: 31, vC: 26.20, cosPhi: 0.84, power: 0.30 },
-  { r: '3', l: '3', c: '4.7', nature: 'Capacitive', current: 15.97, vR: 9.97, vL: 31, vC: 45.50, cosPhi: 0.62, power: 0.30 },
-  { r: '3', l: '5', c: '2.7', nature: 'Capacitive', current: 11.85, vR: 9.97, vL: 18.75, vC: 26.20, cosPhi: 0.84, power: 0.30 },
-  { r: '3', l: '5', c: '4.7', nature: 'Capacitive', current: 27.10, vR: 9.97, vL: 18.75, vC: 45.50, cosPhi: 0.36, power: 0.30 },
+  { r: '3', l: '3', c: '2.7', nature: 'Inductive', current: 11.86, vR: 10, vL: 31.83, vC: 25.45, cosPhi: 0.84, power: 0.30 },
+  { r: '3', l: '3', c: '4.7', nature: 'Capacitive', current: 15.97, vR: 10, vL: 31.83, vC: 44.29, cosPhi: 0.62, power: 0.30 },
+  { r: '3', l: '5', c: '2.7', nature: 'Capacitive', current: 11.85, vR: 10, vL: 19.10, vC: 25.45, cosPhi: 0.84, power: 0.30 },
+  { r: '3', l: '5', c: '4.7', nature: 'Capacitive', current: 27.10, vR: 10, vL: 19.10, vC: 44.29, cosPhi: 0.36, power: 0.30 },
 ]
 
 // Builds the "R-L-C" lookup key used to find a case, e.g. "1-2-2.2".

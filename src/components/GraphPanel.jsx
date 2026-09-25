@@ -16,13 +16,15 @@ const KNOWN_FIELDS = [
 ]
 
 const CALCULATED_FIELDS = [
-  { key: 'vR', label: <>I<sub>R</sub><br />(mA)</>, dataLabel: 'V R', errorLabel: <>V<sub>R</sub> error</>, min: 1, max: 50 },
-  { key: 'vL', label: <>I<sub>L</sub><br />(mA)</>, dataLabel: 'V L', errorLabel: <>V<sub>L</sub> error</>, min: 1, max: 50 },
-  { key: 'vC', label: <>I<sub>C</sub><br />(mA)</>, dataLabel: 'V C', errorLabel: <>V<sub>C</sub> error</>, min: 1, max: 50 },
+  { key: 'vR', label: <>I<sub>R</sub><br />(mA)</>, dataLabel: 'I R', errorLabel: <>I<sub>R</sub> error</>, min: 1, max: 50 },
+  { key: 'vL', label: <>I<sub>L</sub><br />(mA)</>, dataLabel: 'I L', errorLabel: <>I<sub>L</sub> error</>, min: 1, max: 50 },
+  { key: 'vC', label: <>I<sub>C</sub><br />(mA)</>, dataLabel: 'I C', errorLabel: <>I<sub>C</sub> error</>, min: 1, max: 50 },
   { key: 'cosPhi', label: <>cosφ<br /></>, dataLabel: 'Power factor', errorLabel: <>cosφ error</>, min: 0, max: 1 },
   // The reference answers are 0.27–0.89 W, so fractional watts must be allowed.
   { key: 'power', label: <>Power<br />(W)</>, dataLabel: 'Power', errorLabel: <>P error</>, min: 0, max: 50 },
 ]
+
+const ERROR_FIELDS = CALCULATED_FIELDS.filter(({ key }) => key !== 'cosPhi')
 
 const ALL_FIELDS = [...KNOWN_FIELDS, ...CALCULATED_FIELDS]
 const EMPTY_ROW = Object.fromEntries(ALL_FIELDS.map(({ key }) => [key, '']))
@@ -242,7 +244,7 @@ const handleFieldChange = (rowId, key, value) => {
 
     const theoretical = verificationValues
     const tableValues = getTableValues(observation)
-    const errorValues = Object.fromEntries(CALCULATED_FIELDS.map(({ key }) => [
+    const errorValues = Object.fromEntries(ERROR_FIELDS.map(({ key }) => [
       `${key}Error`,
       getPercentError(tableValues[key], theoretical[key]),
     ]))
@@ -496,7 +498,7 @@ const handleFieldChange = (rowId, key, value) => {
                     </small>
                   </div>
                   <div className="calculation-error-grid">
-                    {CALCULATED_FIELDS.map(({ key, errorLabel }) => {
+                    {ERROR_FIELDS.map(({ key, errorLabel }) => {
                       const error = statuses ? getPercentError(tableValues[key], theoretical[key]) : null
                       const status = statuses?.[key]
                       return (
