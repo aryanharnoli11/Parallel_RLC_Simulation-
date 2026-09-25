@@ -1154,7 +1154,7 @@ const handleCheckConnections = useCallback((result, options = {}) => {
           />
 
           <footer className="experiment-footer">
-            <span>© 2026 Virtual Labs, IIT Roorkee</span>
+            <span>© 2026 Virtual Labs | IIT Roorkee</span>
           </footer>
         </div>
       </div>
